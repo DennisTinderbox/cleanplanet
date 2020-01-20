@@ -1,0 +1,14 @@
+/*
+MASTER CSS
+Drop hier (EN ALLEEN HIER) de nodige CSS
+*/
+
+.longboi{
+  min-height: 800px;
+}
+.gekkigheid:hover h1{
+  animation: bounceIn 1s;
+}
+.gekoloniseerd{
+  animation: tada 1s;
+}

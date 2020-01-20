@@ -5,6 +5,8 @@
     <title>A Clean Planet For All</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="dist/aos.css"/>
+    <link rel="stylesheet" href="css/animatie.css">
+    <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
 
@@ -18,14 +20,13 @@
         <div class="card-body">
           <h5 class="card-title">Testje</h5>
           <p class="card-text">Doet ie het? Dat is een vraag die we onszelf kunnen stellen natuurlijk.</p>
-          <a href="#" class="btn btn-info">Werkt met dit knoppie?</a>
+          <button type="button" name="animeer" onclick="koloniseren()" class="btn btn-info">Werkt met dit knoppie?</button>
         </div>
       </div>
     </div>
 
     <div class="col-sm">
-      <div class="card bg-warning text-white" data-aos="fade-up"
-       data-aos-anchor-placement="bottom-bottom">
+      <div id="koloniseerMij" class="card bg-warning text-white" data-aos="fade-up">
         <div class="card-body">
           <h1>TEST2</h1>
         </div>
@@ -33,18 +34,75 @@
     </div>
 
     <div class="col-sm">
-      <div class="card bg-danger text-white">
+      <div class="card bg-danger text-white gekkigheid" data-aos="fade-left">
         <div class="card-body">
           <h1>TEST3</h1>
         </div>
       </div>
     </div>
-  </div>
-</div>
+
+  </div> <!-- Einde row -->
+
+  <div class="row mt-5">
+
+    <div class="col-sm">
+      <div class="card longboi bg-info text-white">
+        <h1>longboi</h1>
+      </div>
+    </div>
+
+  </div> <!-- Einde row -->
+
+  <div class="row mt-5">
+
+    <div class="col-sm">
+      <div class="card bg-warning text-white" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+        <div class="card-body">
+          <h1>TEST4</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm">
+      <div class="card bg-danger text-white" data-aos="fade-up">
+        <div class="card-body">
+          <h1>TEST5</h1>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- Einde row -->
+
+  <div class="row mt-5">
+
+    <div class="col-sm">
+      <div class="card longboi bg-info text-white">
+        <h1>longboi</h1>
+      </div>
+    </div>
+
+  </div> <!-- Einde row -->
+
+
+
+</div> <!-- Einde container -->
 
 
 <!-- SCRIPTJES MOGEN HIER ONDER -->
 
+<script src="dist/aos.js"></script>
+
+<script type="text/javascript">
+  function koloniseren() {
+    var element, name, arr;
+    element = document.getElementById("koloniseerMij");
+    name = "gekoloniseerd";
+    arr = element.className.split(" ");
+    if (arr.indexOf(name) == -1) {
+      element.className += " " + name;
+    }
+  }
+</script>
 
 <script>
   AOS.init({
